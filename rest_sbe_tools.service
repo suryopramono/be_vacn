@@ -1,0 +1,17 @@
+[Unit]
+Description=SBE Tools Flutter QR Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sbfsrv/itdev/Deploy/Node/rest_sbe_tools
+
+#ExecStart=/usr/bin/npm run serve
+ExecStart=/usr/bin/node /home/sbfsrv/itdev/Deploy/Node/rest_sbe_tools/server.js
+
+Restart=on-failure
+User=sbfsrv
+Environment=PORT=3009
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+sudo systemctl status rest_sbe_tools.service
+
+sudo systemctl start rest_sbe_tools.service
+
+sudo systemctl restart rest_sbe_tools.service
+
+sudo systemctl start rest_sbe_tools.service
+
+-- reload service systemd
+sudo systemctl daemon-reload 
+
+-- check all logs
+journalctl -u rest_sbe_tools 
